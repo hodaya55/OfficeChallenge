@@ -51,7 +51,7 @@ describe("Manager class", function () {
     manager.hireEmployee("Brandon");
 
     manager.employees[0].work =  manager.employees[1].work = jasmine.createSpy("'work'");
-    
+ 
     manager.askEmployeesToWork();
     
     expect(manager.employees[0].work).toHaveBeenCalled();
@@ -131,7 +131,7 @@ describe("Office class", function () {
     office.managers[1].hireEmployee("Brandon");
     office.managers[1].hireEmployee("Omer");
 
-    office.startWorkDay();
+    office.startWorkDay(office);
 
     expect(office.documents.length).toEqual(30);
 
